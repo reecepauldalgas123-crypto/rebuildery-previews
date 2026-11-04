@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>About us and our team | Chandlers Ford Vets, Eastleigh</title>
+<meta name="description" content="An independent family practice founded in Eastleigh in 1958, owned and run by Clare and Beyers van Niekerk. Meet our vets, nurses and reception team.">
+<link rel="preload" href="fonts/fraunces-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="about">
+
+<main>
+<section class="page-hero">
+  <div class="wrap reveal">
+    <p class="eyebrow">About us</p>
+    <h1>Proud to be your local, family run practice</h1>
+    <p class="lead">Our aim has stayed the same for decades: high quality modern veterinary care, built on client care, friendliness and family.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split" style="align-items:start">
+    <div class="reveal">
+      <p class="eyebrow">Our story</p>
+      <h2>From Leigh Road to three surgeries</h2>
+      <p class="lead" style="margin-top:14px">Some of our team have been with us for decades. Here is how we got here.</p>
+    </div>
+    <ol class="timeline reveal">
+      <li><b>1958</b><p>Mr Neal and Mr Davies found a mixed practice in Leigh Road, Eastleigh. It later becomes widely known as Davies and Aylott and moves to small animals only.</p></li>
+      <li><b>1991</b><p>Leslie Montgomery joins as an assistant and starts a career here spanning three decades.</p></li>
+      <li><b>1997</b><p>Clare, once the practice's Saturday girl, returns as a vet after Bristol Vet School, with her husband Beyers van Niekerk.</p></li>
+      <li><b>2000</b><p>Beyers becomes a partner.</p></li>
+      <li><b>2016</b><p>Clare and Beyers become full owners of the practice.</p></li>
+      <li><b>2025</b><p>Village Vets in Pilgrims Close joins the family, alongside Chandlers Ford and Boyatt Wood.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Meet the team</p>
+      <h2>The people looking after your pet</h2>
+      <p>A large, experienced team of vets, nurses and reception staff across our three surgeries.</p>
+    </div>
+    <!-- CONFIRM: team list taken from the old Meet the Team page (June 2026). Swap initials for real headshots. -->
+    <div class="team-group reveal" style="margin-top:0">
+      <h3>Directors and vets</h3>
+      <div class="team-grid" data-team="vets"></div>
+    </div>
+    <div class="team-group reveal">
+      <h3>Nursing team</h3>
+      <div class="team-grid" data-team="nurses"></div>
+    </div>
+    <div class="team-group reveal">
+      <h3>Reception and support</h3>
+      <div class="team-grid" data-team="support"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split">
+    <div class="photo reveal" aria-hidden="true">
+      <!-- PHOTO: replace with their own team photo -->
+      <svg viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice"><rect width="500" height="400" fill="#1d4a3c"/><circle cx="250" cy="420" r="260" fill="#2a6553"/><g fill="#f6efe6"><circle cx="170" cy="180" r="38"/><circle cx="250" cy="160" r="42"/><circle cx="330" cy="180" r="38"/><path d="M110 330c0-50 26-80 60-80s60 30 60 80zM185 330c0-60 30-95 65-95s65 35 65 95zM270 330c0-50 26-80 60-80s60 30 60 80z"/></g></svg>
+      <span class="cap">Your own team photo goes here</span>
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">Careers</p>
+      <h2>Join an independent team</h2>
+      <p class="lead" style="margin-top:14px">We are always keen to hear from qualified and student nurses, vets and support staff. No out of hours duties, plus the best Christmas party and a summer BBQ every year.</p>
+      <p style="margin-top:26px"><a class="btn btn-green" href="mailto:reception@chandlersfordvets.co.uk?subject=Careers">Get in touch about vacancies</a></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<script src="app.js"></script>
+<script>
+(function () {
+  var TEAM = {
+    vets: [["Beyers van Niekerk","Director and vet"],["Clare van Niekerk","Director and vet"],["Joe Gosling","Clinical Director"],["Annekie Montgomery","Vet"],["Leslie Montgomery","Vet"],["Alice Humphreys","Vet"],["Emily Spratt","Vet"],["Caroline Jewell","Vet"],["Davinia Perez Barreto","Vet"],["Rebecca Scrivener","Vet"],["Mary Capocci","Vet"],["Gemma Ives","Vet"],["Louise Bosier","Vet"],["Rebecca Phillips","Vet"],["Sophie Harris","Vet"],["Grace Roberts","Vet"],["Tilly Arden","Vet"]],
+    nurses: [["Elaine Freemantle","RVN and Practice Manager"],["Lisa Hansen","Head Nurse RVN"],["Vicky Vaughan","Deputy Head Nurse RVN"],["Lorraine Webb","RVN"],["Anna-Marie Tatum","RVN"],["Dominique Hancock","RVN"],["Charlotte Phillips","RVN"],["Lana Baker","RVN"],["Amy Jordan","RVN"],["Ryan Hunt","RVN"],["Bobbie Buchan","RVN"],["Lyndsay Smith","RVN"],["Millie Goddard","RVN"],["Jo Haywood","Student nurse"],["Simon Spencer","Student nurse"],["Kayleigh Hudson","Student nurse"]],
+    support: [["Vikki Coulson","Veterinary care assistant"],["Jo Hillman","Veterinary care assistant"],["Trudy Hathaway","Insurance administrator"],["Nicky Hunt","Receptionist"],["Sara Rose","Receptionist"],["Lin Blaxill","Receptionist"],["Natalie Zammit","Receptionist"],["Louise Woodhead","Receptionist"]]
+  };
+  document.querySelectorAll("[data-team]").forEach(function (el) {
+    el.innerHTML = TEAM[el.getAttribute("data-team")].map(function (p) {
+      var ini = p[0].split(" ").filter(function (w) { return /^[A-Z]/.test(w); }).map(function (w) { return w[0]; }).join("").slice(0, 2);
+      return '<div class="person"><span class="avatar">' + ini + '</span><span><b>' + p[0] + '</b><span>' + p[1] + '</span></span></div>';
+    }).join("");
+  });
+})();
+</script>
+</body>
+</html>

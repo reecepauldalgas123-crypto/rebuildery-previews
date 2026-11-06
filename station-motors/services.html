@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Services | MOTs, Diagnostics and Repairs | Station Motors, Woolston</title>
+<meta name="description" content="MOT testing, computer diagnostics, brakes, clutches, exhausts, steering and suspension, oil changes and safety checks at Station Motors, Portsmouth Road, Woolston, Southampton.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="services">
+
+<div class="page-hero">
+  <div class="wrap">
+    <div class="crumbs"><a href="index.html">Home</a> / Services</div>
+    <h1>Our services</h1>
+    <p>Everything your car needs to stay safe and legal, from the yearly MOT to clutches and exhausts. Not sure what's wrong? Call and describe it, and we'll take a look.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap grid-2" style="align-items:start">
+    <div id="svc-list"></div>
+    <aside style="position:sticky;top:96px">
+      <div class="card feature">
+        <div class="ic" data-icon="phone"></div>
+        <h3>Book in or get a price</h3>
+        <p>Call the garage and we'll find a time that suits you. Collection and delivery and a loan car can be arranged when available.</p>
+        <p style="margin-top:18px"><a class="btn btn-y" href="tel:+442380448468">023 8044 8468</a></p>
+        <p style="margin-top:12px"><a href="contact.html" style="color:#f5c518">Or send us a message</a></p>
+      </div>
+      <!-- PHOTO: replace with a workshop photo -->
+      <div class="photo light" style="margin-top:22px"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h3l2-3h8l2 3h3v13H3z"/><circle cx="12" cy="13" r="4"/></svg>Workshop photo</div></div>
+    </aside>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="wrap cta-inner">
+    <div><h2>Need it back today?</h2><p>We aim to finish any work within one day whenever possible.</p></div>
+    <div class="hero-ctas"><a class="btn btn-d" href="tel:+442380448468"><span data-icon="phone"></span>Call the garage</a></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+<script>
+document.getElementById('svc-list').innerHTML=window.SM_SERVICES.map(function(s){
+  return '<div class="svc reveal" id="'+s.id+'"><div class="ic">'+window.SM_ICONS.wrench+'</div><div><h3>'+s.name+'</h3><p>'+s.short+'</p></div></div>';
+}).join('');
+document.querySelectorAll('#svc-list .reveal').forEach(function(e){e.classList.add('in');});
+</script>
+</body>
+</html>
